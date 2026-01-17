@@ -1,4 +1,125 @@
 baseURL = 'https://Loc000Nguyen000.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'CTF Writeups & Security Blog'
 theme = 'PaperMod'
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "CTF Writeups & Security Blog"
+  description = "Capture The Flag writeups, cybersecurity challenges, and security research"
+  keywords = ["CTF", "writeups", "cybersecurity", "hacking", "pentesting", "security"]
+  author = "Zicc0Nguyen"
+  dateFormat = "January 2, 2006"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = true
+
+  [params.profileMode]
+    enabled = true
+    title = "CTF Writeups & Security Research"
+    subtitle = "Documenting my journey through Capture The Flag challenges and cybersecurity learning"
+    imageUrl = ""
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "profile"
+
+    [[params.profileMode.buttons]]
+      name = "Writeups"
+      url = "/writeups"
+
+    [[params.profileMode.buttons]]
+      name = "Categories"
+      url = "/categories"
+
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "/tags"
+
+  [params.homeInfoParams]
+    Title = "Welcome to my CTF Writeups"
+    Content = "Sharing solutions, techniques, and learnings from various CTF competitions and security challenges"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Loc000Nguyen000"
+
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/"
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+  identifier = "writeups"
+  name = "Writeups"
+  url = "/writeups/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "categories"
+  name = "Categories"
+  url = "/categories/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 40
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  ctf = "ctfs"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
